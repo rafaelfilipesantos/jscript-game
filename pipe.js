@@ -1,14 +1,14 @@
-const HOLE_HEIGHT = 200;
-const PIPE_WIDTH = 120;
-const PIPE_INTERVAL = 1500;
-const PIPE_SPEED = 0.75;
+const HOLE_HEIGHT = 220;
+const PIPE_WIDTH = 110;
+const PIPE_INTERVAL = 1600;
+const PIPE_SPEED = 0.6;
 let pipes = [];
 let timeSinceLastPipe;
 let passedPipeCount;
 
 export function setupPipes() {
   document.documentElement.style.setProperty("--pipe-width", PIPE_WIDTH);
-  document.documentElement.style.setProperty("--hole.height", HOLE_HEIGHT);
+  document.documentElement.style.setProperty("--hole-height", HOLE_HEIGHT);
   pipes.forEach((pipe) => pipe.remove());
   timeSinceLastPipe = PIPE_INTERVAL;
   passedPipeCount = 0;
